@@ -16,15 +16,15 @@ int main()
 {
 	email e1("Pelle", "2018-12-13", "tjabba");
 	email e2("Zlatan", "2018-11-10", "tjena");
-	email e3("Kungen", "2018-09-05", "Halla");
+	email e3("Kungen", "2018-09-05", "halla");
 	email e4("Bert", "1990-12-10", "labb");
-	email e5("Sune", "2018-11-09", "hej");
+	email e5("Sune", "2018-11-09", "Hej");
 	mailbox mails(3);
 	mails.add(e1);
 	mails.add(e2);
-	mails.add(e3);
-	mails.add(e4);
-	mails.add(e5);
+	mails[0] = e3;
+	mails[1] = e4;
+	mails[2] = e5;
 	show(mails);
 	mails.sort_date();
 	std::cout << "sort date:\n";
@@ -36,7 +36,6 @@ int main()
 	std::cout << "sort vem:\n";
 	show(mails);
 	mails.read(1);
-	
 	system("pause");
 	return 0;
 }

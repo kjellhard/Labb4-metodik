@@ -14,6 +14,7 @@ public:
 	void read(size_t index);
 	std::vector<email>::iterator begin();
 	std::vector<email>::iterator end();
+	email & operator[](size_t index);
 	size_t size();
 	~mailbox();
 private:

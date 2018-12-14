@@ -1,9 +1,10 @@
 #pragma once
 #include <string>
+
 class email
 {
 public:
-	email(std::string w = nullptr, std::string d = nullptr, std::string s = nullptr);
+	email(std::string w = "", std::string d = "", std::string s = "");
 
 	~email();
 	friend std::ostream & operator<<(std::ostream &out, const email &print);

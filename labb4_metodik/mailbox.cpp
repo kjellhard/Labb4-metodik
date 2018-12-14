@@ -41,6 +41,11 @@ std::vector<email>::iterator mailbox::end()
 	return box.end();
 }
 
+email & mailbox::operator[](size_t index)
+{
+	return box[index];
+}
+
 size_t mailbox::size()
 {
 	return box.size();
